@@ -51,11 +51,22 @@ func (a Animal) MarshalJSON() ([]byte, error) {
 }
 
 func main() {
+	gopher := "gopher"
+	strB, _ := json.Marshal(gopher)
+	log.Printf("gopher byte %s", string(strB))
+
+	var animal *Animal
+	if err := json.Unmarshal(strB, &animal); err != nil {
+		log.Fatal(err)
+	}
+	log.Printf("animal %s", animal)
+
 	blob := `["gopher","armadillo","zebra","unknown","gopher","bee","gopher","zebra"]`
 	var zoo []*Animal
 	if err := json.Unmarshal([]byte(blob), &zoo); err != nil {
 		log.Fatal(err)
 	}
+	log.Printf("zoo %s", zoo)
 
 	census := make(map[Animal]int)
 	for _, animal := range zoo {
