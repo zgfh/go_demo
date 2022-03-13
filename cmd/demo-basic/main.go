@@ -100,6 +100,8 @@ func demoFor() {
 }
 
 func main() {
+	fmt.Println(fmt.Errorf("failed to find pid namespace of process %q", 52216))
+	fmt.Println(fmt.Errorf("failed to find pid namespace of process %q", 48646))
 	demoSwitch()
 	v1.DemoFunc()
 	v1.StructMain()
