@@ -4,15 +4,17 @@ import (
 	"errors"
 	"flag"
 	"github.com/spf13/pflag"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 )
 
 /**
 log 组件
-1. klog: k8s.io/klog  https://github.com/kubernetes/klog
+1. klog: k8s.io/klog  https://github.com/kubernetes/klog 设置: k8s.io/component-base/logs
 2. kit log: github.com/go-kit/kit/log
-*/
+3. https://github.com/coreos/pkg/tree/master/capnslog
+4. https://pkg.go.dev/go.uber.org/zap
 
+*/
 /**
 规范： https://github.com/kubernetes/community/blob/master/contributors/devel/sig-instrumentation/logging.md
 

@@ -4,7 +4,7 @@ import (
 	"flag"
 	"github.com/spf13/pflag"
 	"github.com/zgfh/go-demo/cmd/demo-cli/cmd"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 	"os"
 )
 
